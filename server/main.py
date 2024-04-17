@@ -118,7 +118,7 @@ async def startup_event():
     async def task1():
         while True:
             await get_last_video_and_transcript()
-            # Each 2 mins here but on prod i set it to 24 hours
+            # Each 2 mins here but on prod i set it to 2 hours
             await asyncio.sleep(120)
 
     async def main():
