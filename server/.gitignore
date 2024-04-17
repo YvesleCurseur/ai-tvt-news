@@ -11,4 +11,5 @@ venv/
 ENV/ 
 env.bak/ 
 venv.bak/ 
-newsdb.db
+# To not commit the db
+# newsdb.db
