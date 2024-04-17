@@ -30,7 +30,7 @@ This project uses the OpenAI API to generate [Sparse Priming Representations (SP
 5. Run `npm start` to start the client application.
 
 # Some additional informations
-- The project work with a credentials.json file that you can get from the Google Cloud Console for the YouTube API Key. Example in ```server/core/credentials.json```.
+- The project work with a credentials.json file that you can get from the Google Cloud Console for the YouTube service. Example in ```server/core/credentials.json```.
 - Another way will be to download the audio and extract the transcript using the Google Speech-to-Text API, but sometimes audio files can contains noise and the transcript can be wrong. So i prefere wait and trust the YouTube API with that.
 - Create a issue if you have any problem with the project.
 
