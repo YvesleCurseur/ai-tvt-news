@@ -101,30 +101,30 @@ async def update_an_news(news_id: int, news: News):
     return news_to_update
 
 
-@app.delete("/news/{news_id}")
-async def delete_item(news_id: int):
-    news_to_delete = db.query(models.News).filter(models.News.id == news_id).first()
-    if news_to_delete is None:
-        raise HTTPException(
-            status_code=STATUS.HTTP_404_NOT_FOUND, detail="Resource Not Found"
-        )
-    db.delete(news_to_delete)
-    db.commit()
-    return news_to_delete
+# @app.delete("/news/{news_id}")
+# async def delete_item(news_id: int):
+#    news_to_delete = db.query(models.News).filter(models.News.id == news_id).first()
+#    if news_to_delete is None:
+#        raise HTTPException(
+#            status_code=STATUS.HTTP_404_NOT_FOUND, detail="Resource Not Found"
+#        )
+#    db.delete(news_to_delete)
+#    db.commit()
+#    return news_to_delete
 
-@app.on_event("startup")
-async def startup_event():
+#@app.on_event("startup")
+#async def startup_event():
 
-    async def task1():
-        while True:
-            await get_last_video_and_transcript()
+#   async def task1():
+#        while True:
+#            await get_last_video_and_transcript()
             # Each 2 mins here but on prod i set it to 2 hours
-            await asyncio.sleep(120)
+#            await asyncio.sleep(120)
 
-    async def main():
-        await asyncio.gather(task1())
+#    async def main():
+#        await asyncio.gather(task1())
 
-    asyncio.create_task(main())
+#    asyncio.create_task(main())
 
 
 
